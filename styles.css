@@ -384,37 +384,6 @@ h2 {
   font-size: 0.95rem;
 }
 
-/* Shortcuts */
-
-.shortcuts {
-  width: 100%;
-  margin-top: 24px;
-  border-collapse: collapse;
-}
-
-.shortcuts td {
-  padding: 14px 0;
-  border-bottom: 1px solid var(--border);
-}
-
-.shortcuts td:last-child {
-  color: var(--muted);
-  text-align: right;
-}
-
-kbd {
-  display: inline-block;
-  min-width: 28px;
-  padding: 3px 8px;
-  background: var(--surface-2);
-  border: 1px solid var(--border);
-  border-bottom-width: 2px;
-  border-radius: 6px;
-  font-family: var(--font);
-  font-size: 0.85rem;
-  text-align: center;
-}
-
 /* Downloads */
 
 .downloads {
