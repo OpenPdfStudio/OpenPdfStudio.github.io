@@ -345,6 +345,47 @@ h2 {
   letter-spacing: -0.01em;
 }
 
+.steps,
+.plain {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.steps li,
+.plain li {
+  margin: 0.4rem 0;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.shortcuts {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.shortcuts th,
+.shortcuts td {
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.shortcuts th {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.shortcuts td:first-child {
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+  white-space: nowrap;
+  width: 14rem;
+}
+
 .section-lede {
   margin: 0 0 40px;
   color: var(--muted);
