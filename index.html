@@ -162,7 +162,7 @@
           <article class="card">
             <svg viewBox="0 0 24 24"><path d="M9,22A1,1 0 0,1 8,21V18H4A2,2 0 0,1 2,16V4C2,2.89 2.9,2 4,2H20A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H13.9L10.2,21.71C10,21.9 9.75,22 9.5,22H9M10,16V19.08L13.08,16H20V4H4V16H10Z"/></svg>
             <h3>Comments and annotations</h3>
-            <p>Add notes, typewriter text, text boxes, callouts, and text markup. Format each one, then save the comments into the PDF.</p>
+            <p>Add notes, typewriter text, text boxes, callouts, highlights, underlines, strikeouts, and squiggly underlines. Hover a mark to copy it, remove it, or change its colour, then save the comments into the PDF.</p>
           </article>
           <article class="card">
             <svg viewBox="0 0 24 24"><path d="M12,21.5C10.65,20.65 8.2,20 6.5,20C4.85,20 3.15,20.3 1.75,21.05C1.65,21.1 1.6,21.1 1.5,21.1C1.25,21.1 1,20.85 1,20.6V6C1.6,5.55 2.25,5.25 3,5C4.11,4.65 5.33,4.5 6.5,4.5C8.45,4.5 10.55,4.9 12,6C13.45,4.9 15.55,4.5 17.5,4.5C18.67,4.5 19.89,4.65 21,5C21.75,5.25 22.4,5.55 23,6V20.6C23,20.85 22.75,21.1 22.5,21.1C22.4,21.1 22.35,21.1 22.25,21.05C20.85,20.3 19.15,20 17.5,20C15.8,20 13.35,20.65 12,21.5M12,8V19.5C13.35,18.65 15.8,18 17.5,18C18.7,18 19.9,18.15 21,18.5V7C19.9,6.65 18.7,6.5 17.5,6.5C15.8,6.5 13.35,7.15 12,8Z"/></svg>
@@ -210,8 +210,12 @@
         <p class="download-note">
           The macOS build is not signed yet, so macOS will warn the first time you open it.
           Right-click the app and choose Open to run it anyway.
-          All builds are on the <a href="https://github.com/younisiqbal/OpenPdfStudio/releases">Releases page</a>.
         </p>
+
+        <h3 class="versions-title">Previous versions</h3>
+        <div id="versions" class="versions">
+          <p class="download-note">Loading versions…</p>
+        </div>
       </div>
     </section>
 
@@ -237,6 +241,43 @@
       </div>
     </section>
   </main>
+
+  <script>
+    (function () {
+      var root = document.getElementById("versions");
+      var releasesUrl = "https://github.com/younisiqbal/OpenPdfStudio/releases";
+      fetch("https://api.github.com/repos/younisiqbal/OpenPdfStudio/releases")
+        .then(function (response) {
+          if (!response.ok) throw new Error("releases");
+          return response.json();
+        })
+        .then(function (releases) {
+          if (!releases.length) {
+            root.innerHTML = '<p class="download-note">No older builds yet. See the <a href="' + releasesUrl + '">Releases page</a>.</p>';
+            return;
+          }
+          root.innerHTML = releases.map(function (release) {
+            var date = release.published_at
+              ? new Date(release.published_at).toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" })
+              : "";
+            var links = (release.assets || []).filter(function (asset) {
+              return /\.zip$/i.test(asset.name);
+            }).map(function (asset) {
+              var label = asset.name.replace(/^OpenPdfStudio-/, "").replace(/\.zip$/i, "");
+              return '<a href="' + asset.browser_download_url + '">' + label + '</a>';
+            }).join("");
+            return '<article class="version">' +
+              '<div><strong>' + (release.tag_name || release.name || "Release") + '</strong>' +
+              '<span>' + date + '</span></div>' +
+              '<div class="version-links">' + (links || '<a href="' + release.html_url + '">Files</a>') + '</div>' +
+              '</article>';
+          }).join("");
+        })
+        .catch(function () {
+          root.innerHTML = '<p class="download-note">Versions could not be loaded. See the <a href="' + releasesUrl + '">Releases page</a>.</p>';
+        });
+    })();
+  </script>
 
   <footer class="footer">
     <div class="container footer-inner">
