@@ -187,151 +187,14 @@ h1 {
   font-size: 0.9rem;
 }
 
-/* App window mockup */
+/* App screenshot */
 
-.window {
-  background: var(--surface);
+.hero-shot {
+  width: 100%;
+  height: auto;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-}
-
-.window-bar {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 14px;
-  background: var(--bg-alt);
-  border-bottom: 1px solid var(--border);
-}
-
-.dot {
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-  background: var(--surface-2);
-}
-
-.window-tabs {
-  display: flex;
-  gap: 4px;
-  margin-left: 12px;
-}
-
-.tab {
-  padding: 4px 12px;
-  border-radius: 6px;
-  color: var(--muted);
-  font-size: 0.78rem;
-}
-
-.tab.active {
-  background: var(--surface-2);
-  color: var(--text);
-}
-
-.window-tools {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 8px 14px;
-  border-bottom: 1px solid var(--border);
-}
-
-.window-tools svg {
-  width: 18px;
-  height: 18px;
-  fill: var(--muted);
-}
-
-.window-tools svg:first-child {
-  fill: var(--accent-hover);
-}
-
-.window-tools .sep {
-  width: 1px;
-  height: 18px;
-  background: var(--border);
-}
-
-.zoom {
-  color: var(--muted);
-  font-size: 0.8rem;
-}
-
-.window-body {
-  display: flex;
-  height: 320px;
-  background: var(--bg-alt);
-}
-
-.thumbs {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 14px;
-  border-right: 1px solid var(--border);
-}
-
-.thumb {
-  width: 46px;
-  height: 60px;
-  background: #d9dde1;
-  border-radius: 3px;
-  opacity: 0.55;
-}
-
-.thumb.active {
-  opacity: 1;
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-}
-
-.page {
-  flex: 1;
-  margin: 18px auto;
-  max-width: 260px;
-  padding: 26px 24px;
-  background: #fbfbfb;
-  border-radius: 3px;
-}
-
-.line {
-  height: 7px;
-  margin-bottom: 11px;
-  background: #d5d9dd;
-  border-radius: 3px;
-}
-
-.line.h {
-  width: 60%;
-  height: 12px;
-  margin-bottom: 18px;
-  background: #3b4248;
-}
-
-.line.short {
-  width: 55%;
-}
-
-.line.selected {
-  background: rgba(14, 124, 134, 0.45);
-}
-
-.block {
-  height: 70px;
-  margin: 16px 0;
-  background: linear-gradient(135deg, #0e7c86, #12939e);
-  border-radius: 3px;
-  opacity: 0.8;
-}
-
-.window-status {
-  padding: 6px 14px;
-  border-top: 1px solid var(--border);
-  color: var(--muted);
-  font-size: 0.75rem;
 }
 
 /* Sections */
@@ -625,10 +488,6 @@ h2 {
   .version {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .window-body {
-    height: 260px;
   }
 
   .footer-inner {
