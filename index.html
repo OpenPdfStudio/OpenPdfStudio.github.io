@@ -23,6 +23,7 @@
       <nav class="nav-links">
         <a href="#features">Features</a>
         <a href="#start">Get started</a>
+        <a href="#install">Install</a>
         <a href="#shortcuts">Shortcuts</a>
         <a href="#privacy">Privacy</a>
         <a href="#download">Download</a>
@@ -199,6 +200,30 @@
       </div>
     </section>
 
+    <section id="install" class="section">
+      <div class="container">
+        <h2>Install or run the zip</h2>
+        <p class="section-lede">Use an installer to add a menu shortcut and to offer OpenPdfStudio for PDF files. The zip is the portable copy: unzip it anywhere and run it, then set it as the default PDF app yourself if you want.</p>
+        <div class="os-guide">
+          <article>
+            <h3>Windows</h3>
+            <p>Run <code>OpenPdfStudio-win-x64-setup.exe</code>. It adds a Start menu shortcut and an uninstall entry, and registers the app so it can be chosen for PDFs. In the app, File &gt; Use as default PDF app opens Windows Settings so you can confirm it.</p>
+            <p>For the zip, unzip it, run <code>OpenPdfStudio.exe</code>, then in Settings, Default apps, choose that exe for <code>.pdf</code>.</p>
+          </article>
+          <article>
+            <h3>Linux</h3>
+            <p>Install <code>OpenPdfStudio-linux-x64.deb</code>. It adds an applications-menu entry that can open PDFs. In the app, File &gt; Use as default PDF app sets it for this account.</p>
+            <p>For the zip, unzip it, mark <code>OpenPdfStudio</code> executable, run it, then in the file manager use Open With and set it as the default for PDFs.</p>
+          </article>
+          <article>
+            <h3>macOS</h3>
+            <p>Open the dmg and drag OpenPdfStudio to Applications. The first launch needs Right-click, Open, because the build is unsigned.</p>
+            <p>For the zip, unzip it and use the same Right-click, Open. In either case, Finder, Get Info, Open With, Change All sets it as the default for PDFs.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section id="markup" class="section">
       <div class="container">
         <h2>Mark up a PDF</h2>
@@ -318,6 +343,26 @@
           Right-click the app and choose Open to run it anyway.
         </p>
 
+        <h3 class="versions-title">Installers</h3>
+        <p class="section-lede">These add a menu shortcut and register OpenPdfStudio so it can open PDF files.</p>
+        <div class="downloads">
+          <a class="download" href="https://github.com/younisiqbal/OpenPdfStudio/releases/latest/download/OpenPdfStudio-win-x64-setup.exe">
+            <svg viewBox="0 0 24 24"><path d="M3,12V6.75L9,5.43V11.91L3,12M20,3V11.75L10,11.9V5.21L20,3M3,13L9,13.09V19.9L3,18.75V13M20,13.25V22L10,20.09V13.1L20,13.25Z"/></svg>
+            <span class="download-name">Windows setup</span>
+            <span class="download-meta">64-bit installer</span>
+          </a>
+          <a class="download" href="https://github.com/younisiqbal/OpenPdfStudio/releases/latest/download/OpenPdfStudio-linux-x64.deb">
+            <svg viewBox="0 0 24 24"><path d="M14.62,8.35C14.2,8.63 12.87,9.39 12.67,9.54C12.28,9.85 11.92,9.83 11.53,9.53C11.33,9.37 10,8.61 9.58,8.34C9.1,8.03 9.13,7.64 9.66,7.42C11.3,6.73 12.94,6.78 14.57,7.45C15.06,7.66 15.08,8.05 14.62,8.35M21.84,15.63C20.91,13.54 19.64,11.64 18,9.97C17.47,9.42 17.14,8.8 16.94,8.09C16.84,7.76 16.77,7.42 16.7,7.08C16.5,6.2 16.41,5.3 16,4.47C15.27,2.89 14,2.07 12.16,2C10.35,2.05 9,2.81 8.21,4.4C8,4.83 7.85,5.28 7.75,5.74C7.58,6.5 7.43,7.29 7.25,8.06C7.1,8.71 6.8,9.27 6.29,9.77C4.68,11.34 3.39,13.13 2.43,15.15C2.27,15.5 2.13,15.87 2.04,16.24C1.67,17.89 2.81,19.56 4.68,19.73C5.32,19.79 5.97,19.84 6.59,20.03C7.41,20.28 8.23,20.59 9.07,20.8C9.76,20.97 10.46,21.13 11.17,21.2C12.26,21.32 13.33,21.15 14.38,20.88C15.08,20.7 15.76,20.47 16.45,20.27C17.13,20.07 17.8,19.84 18.5,19.75C19.63,19.6 20.62,19.23 21.39,18.38C22.09,17.6 22.24,16.6 21.84,15.63Z"/></svg>
+            <span class="download-name">Linux package</span>
+            <span class="download-meta">.deb, 64-bit x64</span>
+          </a>
+          <a class="download" href="https://github.com/younisiqbal/OpenPdfStudio/releases/latest/download/OpenPdfStudio-osx-arm64.dmg">
+            <svg viewBox="0 0 24 24"><path d="M18.71,19.5C17.88,20.74 17,21.95 15.66,21.97C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.1,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.09,16.67C20.06,16.74 19.67,18.11 18.71,19.5M13,3.5C13.73,2.67 14.94,2.04 15.94,2C16.07,3.17 15.6,4.35 14.9,5.19C14.21,6.04 13.07,6.7 11.95,6.61C11.8,5.46 12.36,4.26 13,3.5Z"/></svg>
+            <span class="download-name">macOS disk image</span>
+            <span class="download-meta">Apple Silicon (M1 and later)</span>
+          </a>
+        </div>
+
         <h3 class="versions-title">Previous versions</h3>
         <div id="versions" class="versions">
           <p class="download-note">Loading versions…</p>
@@ -367,9 +412,9 @@
               ? new Date(release.published_at).toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" })
               : "";
             var links = (release.assets || []).filter(function (asset) {
-              return /\.zip$/i.test(asset.name);
+              return /\.(zip|deb|dmg)$/i.test(asset.name) || /setup\.exe$/i.test(asset.name);
             }).map(function (asset) {
-              var label = asset.name.replace(/^OpenPdfStudio-/, "").replace(/\.zip$/i, "");
+              var label = asset.name.replace(/^OpenPdfStudio-/, "");
               return '<a href="' + asset.browser_download_url + '">' + label + '</a>';
             }).join("");
             return '<article class="version">' +

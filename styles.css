@@ -358,6 +358,27 @@ h2 {
   margin: 0.4rem 0;
 }
 
+.os-guide {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.os-guide h3 {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+}
+
+.os-guide p {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.os-guide p:last-child {
+  margin-bottom: 0;
+}
+
 .table-wrap {
   overflow-x: auto;
 }
@@ -578,7 +599,8 @@ h2 {
     gap: 48px;
   }
 
-  .grid {
+  .grid,
+  .os-guide {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -589,7 +611,8 @@ h2 {
   }
 
   .grid,
-  .downloads {
+  .downloads,
+  .os-guide {
     grid-template-columns: 1fr;
   }
 
