@@ -169,6 +169,12 @@ h1 {
   font-size: 1.15rem;
 }
 
+.hero-lead {
+  margin: 0 0 16px;
+  color: var(--text);
+  font-size: 1.05rem;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
