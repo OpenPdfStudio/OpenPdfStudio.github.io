@@ -315,9 +315,12 @@
               var label = asset.name.replace(/^OpenPdfStudio-/, "");
               return '<a href="' + asset.browser_download_url + '">' + label + '</a>';
             }).join("");
+            var whatsNew = release.html_url
+              ? '<a class="version-whats-new" href="' + release.html_url + '">What\'s new</a>'
+              : '';
             return '<article class="version">' +
               '<div><strong>' + (release.tag_name || release.name || "Release") + '</strong>' +
-              '<span>' + date + '</span></div>' +
+              '<span>' + date + '</span>' + whatsNew + '</div>' +
               '<div class="version-links">' + (links || '<a href="' + release.html_url + '">Files</a>') + '</div>' +
               '</article>';
           }).join("");

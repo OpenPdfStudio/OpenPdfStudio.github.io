@@ -402,6 +402,19 @@ h2 {
   font-size: 0.88rem;
 }
 
+.version-whats-new {
+  display: inline-block;
+  margin-top: 6px;
+  color: var(--accent);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.version-whats-new:hover {
+  text-decoration: underline;
+}
+
 .version-links {
   display: flex;
   flex-wrap: wrap;
